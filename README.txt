@@ -1,20 +1,22 @@
 # Factor Analysis of Mental Ability Test Scores
 
-Course: Multivariate Data Analysis  
-Institution: National and Kapodistrian University of Athens  
-Department: Department of Mathematics
+**Course:** Multivariate Data Analysis  
+**Institution:** National and Kapodistrian University of Athens  
+**Department:** Department of Mathematics
 
 Exploratory factor analysis of the Holzinger-Swineford (1939) mental ability dataset using R.
 
-# About
+---
+
+## About
 
 This project was completed as part of the Multivariate Data Analysis course at the National and Kapodistrian University of Athens. The objective is to identify latent dimensions underlying nine mental ability test scores from 301 students across two schools (Pasteur and Grant-White).
 
 The analysis demonstrates the full factor analysis workflow: data validation, correlation diagnostics, factor extraction (maximum likelihood), rotation (varimax and promax), model adequacy assessment, and factor score computation for group comparisons.
 
+---
 
-
-# Files
+## Files
 
 | File | Description |
 |------|-------------|
@@ -23,7 +25,9 @@ The analysis demonstrates the full factor analysis workflow: data validation, co
 | `Report_FA_VT.pdf` | Full 17-page analysis report |
 | `Presentation_fa_case_study.pdf` | 5-slide executive summary |
 
-# Key Findings
+---
+
+## Key Findings
 
 | Finding | Result |
 |---------|--------|
@@ -33,21 +37,25 @@ The analysis demonstrates the full factor analysis workflow: data validation, co
 | **Bartlett's test** | p < 0.001 (suitable for FA) |
 | **Model fit (Frobenius norm)** | 0.163 (acceptable) |
 
-# Group Differences Detected
+---
+
+## Group Differences Detected
 
 - **School:** Pasteur higher on spatial ability; Grant-White higher on verbal ability
 - **Grade:** 8th graders outperform 7th graders on verbal and spatial tasks
 - **Sex:** Males slightly faster on processing speed; females slightly stronger on verbal tasks
 
-# Requirements
+---
 
-# Install R and RStudio
+## Requirements
+
+### Install R and RStudio
 
 1. Download R from https://cran.r-project.org/
 2. Download RStudio Desktop (free) from https://posit.co/download/rstudio-desktop/
 3. Install R first, then RStudio
 
-# Install Required Packages
+### Install Required Packages
 
 Open RStudio and run:
 
@@ -55,7 +63,9 @@ Open RStudio and run:
 
 Note: The `rgl` package is used for 3D visualizations. On some systems, you may need additional dependencies.
 
-# Usage
+---
+
+## Usage
 
 ### Clone the repository
 
@@ -69,7 +79,9 @@ In RStudio, open and run:
 
 Or run line by line in RMarkdown or R console.
 
-# What the script does
+---
+
+## What the script does
 
 1. Task 1: Loads data, descriptive statistics, outlier detection
 2. Task 2: Correlation analysis, KMO, Bartlett's test
@@ -79,7 +91,9 @@ Or run line by line in RMarkdown or R console.
 6. Task 6: Model evaluation (residual matrix, Frobenius norm)
 7. Task 7: Factor scores and group comparisons (school, grade, sex)
 
-# Dataset
+---
+
+## Dataset
 
 The Holzinger-Swineford (1939) dataset is a classic dataset in psychometrics and factor analysis. It contains mental ability test scores for students from two schools:
 
@@ -99,9 +113,11 @@ x9: Speeded discrimination (Processing speed)
 
 Note: One observation (row 351) has a missing value in the grade column. R handles this appropriately during analysis.
 
-# Results Summary
+---
 
-# Factor Loadings (Varimax Rotation)
+## Results Summary
+
+### Factor Loadings (Varimax Rotation)
 
 Variable x1: loads on Spatial (0.72)
 Variable x2: loads on Spatial (0.65)
@@ -113,7 +129,7 @@ Variable x7: loads on Processing Speed (0.67)
 Variable x8: loads on Processing Speed (0.71)
 Variable x9: loads on Processing Speed (0.55) and Spatial (0.32)
 
-# Model Comparison
+### Model Comparison
 
 2 factors: AIC = 3.85, BIC = 11.26, Cumulative Variance = 48%
 3 factors: AIC = 5.85, BIC = 16.97, Cumulative Variance = 54%
@@ -121,7 +137,9 @@ Variable x9: loads on Processing Speed (0.55) and Spatial (0.32)
 
 The 3-factor solution was selected based on theoretical interpretability and variance explained, despite AIC/BIC modestly favoring the 2-factor solution (Delta AIC = 2.00).
 
-# Project Structure
+---
+
+## Project Structure
 
 factor-analysis-mental-ability/
 ├── fa_code.R
@@ -131,37 +149,49 @@ factor-analysis-mental-ability/
 ├── README.md
 └── .gitignore
 
-# Limitations
+---
+
+## Limitations
 
 - Maximum likelihood estimation assumes multivariate normality (variables showed some deviation)
 - No inferential testing on factor scores (descriptive comparisons only)
 - Historical data from 1939 (generalizability may be limited)
 - Factor retention criteria did not fully converge (AIC/BIC favored 2 factors, theory favored 3)
 
-# Future Work
+---
+
+## Future Work
 
 - Cross-validate factor structure on an independent sample
 - Employ parallel analysis for additional guidance on factor retention
 - Conduct formal inferential tests on factor score differences
 - Compare with confirmatory factor analysis (CFA) approach
 
-# Author
+---
+
+## Author
 
 Vasiliki Tsoumpanou
 National and Kapodistrian University of Athens
 Department of Mathematics
 
-# License
+---
+
+## License
 
 This project is for educational purposes as part of coursework at the National and Kapodistrian University of Athens.
 
-# Acknowledgements
+---
+
+## Acknowledgements
 
 - Course Instructor: Ioannis Oikonomidis
 - Textbook: Multivariate Data Analysis Notes, Loukia Meligkotsidou
 - Dataset: Holzinger-Swineford (1939) mental ability study
 
-# Contact
+---
+
+## Contact
 
 email: vasiliki.tsoumpanou@gmail.com
 GitHub: https://github.com/vtsoumpanou
